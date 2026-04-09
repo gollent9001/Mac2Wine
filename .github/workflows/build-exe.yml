@@ -1,0 +1,20 @@
+name: Genera EXE da JAR esistente
+on: [push]
+
+jobs:
+  packaging:
+    runs-on: windows-latest
+    steps:
+      - name: Scarica il repository
+        uses: actions/checkout@v4
+
+      - name: Crea l'EXE con Launch4j
+        uses: netoneko/launch4j-action@v1.0.1
+        with:
+          args: launch4j-config.xml
+
+      - name: Salva l'eseguibile creato
+        uses: actions/upload-artifact@v4
+        with:
+          name: Programma-Windows
+          path: PocketTime.exe
