@@ -5,16 +5,20 @@ jobs:
   packaging:
     runs-on: windows-latest
     steps:
-      - name: Scarica il repository
+      - name: Scarica il tuo codice
         uses: actions/checkout@v4
 
-      - name: Crea l'EXE con Launch4j
-        uses: akremer/launch4j-action@v1
-        with:
-          args: config.xml
+      - name: Scarica Launch4j Ufficiale
+        run: |
+          curl -L -o launch4j.zip "https://sourceforge.net/projects/launch4j/files/launch4j-export/3.50/launch4j-3.50-win32.zip/download"
+          7z x launch4j.zip
+
+      - name: Crea l'EXE
+        run: |
+          ./launch4j/launch4jc.exe config.xml
 
       - name: Salva l'eseguibile creato
         uses: actions/upload-artifact@v4
         with:
           name: Programma-Windows
-          path: PocketTime.exe
+          path: pocketTime.exe
