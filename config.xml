@@ -2,7 +2,7 @@
 <launch4jConfig>
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
-  <jar>../jar/pocketTime.jar</jar>
+  <jar>pocketTime.jar</jar>
   <outfile>PocketTime.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
@@ -13,7 +13,7 @@
   <stayAlive>false</stayAlive>
   <restartOnCrash>false</restartOnCrash>
   <manifest></manifest>
-  <icon>../program.ico</icon>
+  <icon>program.ico</icon>
   <singleInstance>
     <mutexName>PocketTime</mutexName>
     <windowTitle></windowTitle>
@@ -33,7 +33,7 @@
     <runtimeBits>64/32</runtimeBits>
   </jre>
   <splash>
-    <file>../splash24.bmp</file>
+    <file>splash24.bmp</file>
     <waitForWindow>true</waitForWindow>
     <timeout>60</timeout>
     <timeoutErr>false</timeoutErr>
