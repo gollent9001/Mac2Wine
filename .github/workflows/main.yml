@@ -1,0 +1,24 @@
+name: Genera EXE da JAR esistente
+on: [push]
+
+jobs:
+  packaging:
+    runs-on: windows-latest
+    steps:
+      - name: Scarica il tuo codice
+        uses: actions/checkout@v4
+
+      - name: Scarica Launch4j Ufficiale
+        run: |
+          curl -L -o launch4j.zip "https://sourceforge.net/projects/launch4j/files/launch4j-export/3.50/launch4j-3.50-win32.zip/download"
+          7z x launch4j.zip
+
+      - name: Crea l'EXE
+        run: |
+          ./launch4j/launch4jc.exe config.xml
+
+      - name: Salva l'eseguibile creato
+        uses: actions/upload-artifact@v4
+        with:
+          name: Programma-Windows
+          path: pocketTime.exe
