@@ -11,7 +11,7 @@ jobs:
       - name: Crea l'EXE con Launch4j
         uses: netoneko/launch4j-action@v1.0.1
         with:
-          args: launch4j-config.xml
+          args: config.xml
 
       - name: Salva l'eseguibile creato
         uses: actions/upload-artifact@v4
