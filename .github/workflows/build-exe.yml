@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Crea l'EXE con Launch4j
-        uses: netoneko/launch4j-action@v1.0.1
+        uses: akremer/launch4j-action@v1
         with:
           args: config.xml
 
