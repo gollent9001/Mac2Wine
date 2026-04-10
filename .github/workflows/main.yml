@@ -8,11 +8,6 @@ jobs:
       - name: Scarica il tuo codice
         uses: actions/checkout@v4
 
-      - name: Scarica Launch4j Ufficiale
-        run: |
-          curl -L -o launch4j.zip "https://sourceforge.net/projects/launch4j/files/launch4j-3/3.50/launch4j-3.50-win32.zip/download"
-          7z x launch4j.zip
-
       - name: Crea l'EXE
         run: |
           ./launch4j/launch4jc.exe config.xml
