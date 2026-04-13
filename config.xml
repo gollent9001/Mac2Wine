@@ -33,7 +33,7 @@
     <runtimeBits>64/32</runtimeBits>
   </jre>
   <splash>
-    <file>Splash2.bmp</file>
+    <file>splash2Small.bmp</file>
     <waitForWindow>true</waitForWindow>
     <timeout>60</timeout>
     <timeoutErr>false</timeoutErr>
